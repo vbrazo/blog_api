@@ -21,27 +21,47 @@ defmodule BlogApi.Blog.FavoriteTest do
     end
   end
 
-  test "changeset/2 with valida params" do
-    favorite = %Favorite{}
-    user = insert(:user)
-    article = insert(:article, author: user)
+  describe "given valid parameters" do
+    test "changeset/2" do
+      favorite = %Favorite{}
+      user = insert(:user)
+      article = insert(:article, author: user)
 
-    params = %{
-      "user_id" => user.id,
-      "article_id" => article.id
-    }
+      params = %{
+        "user_id" => user.id,
+        "article_id" => article.id
+      }
 
-    changes = %{
-      user_id: user.id,
-      article_id: article.id
-    }
+      changes = %{
+        user_id: user.id,
+        article_id: article.id
+      }
 
-    changeset = Favorite.changeset(favorite, params)
-    assert changeset.params == params
-    assert changeset.data == favorite
-    assert changeset.changes == changes
-    assert changeset.validations == []
-    assert changeset.required == [:user_id, :article_id]
-    assert changeset.valid?
+      changeset = Favorite.changeset(favorite, params)
+      assert changeset.params == params
+      assert changeset.data == favorite
+      assert changeset.changes == changes
+      assert changeset.validations == []
+      assert changeset.required == [:user_id, :article_id]
+      assert changeset.valid?
+    end
+  end
+
+  describe "given invalid parameters" do
+    test "changeset/2" do
+      favorite = %Favorite{}
+      user = insert(:user)
+      article = insert(:article, author: user)
+
+      params = %{
+        "user_id" => user.id
+      }
+
+      changes = %{
+        user_id: user.id
+      }
+
+      refute Favorite.changeset(favorite, params).valid?
+    end
   end
 end
