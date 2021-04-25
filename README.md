@@ -6,12 +6,12 @@ We've gone to great lengths to adhere to the **[credo](https://github.com/rrrene
 
 - [Blog API in Phoenix](#blog-api-in-phoenix)
   - [Installation](#installation)
-  - [Tests](#installation)
+  - [Tests](#tests)
   - [Documentation](#documentation)
   - [Style guide](#style-guide)
   - [Licensing](#licensing)
 
-## Installing
+## Installation
 
 To run this project, you will need to install the following dependencies on your system:
 
@@ -21,13 +21,13 @@ To run this project, you will need to install the following dependencies on your
 
 To get started, run the following commands in your project folder:
 
-| Command                                     | Description                                  |
-|---------------------------------------------|----------------------------------------------|
-| cp config/dev.exs.example config/dev.exs    | creates the project's configuration file     |
-| mix deps.get                                | installs the dependencies                    |
-| mix ecto.create                             | creates the database                         |
-| mix ecto.migrate                            | run the database migrations                  |
-| mix phx.server                              | run the application                          |
+| Command                                       | Description                                  |
+|-----------------------------------------------|----------------------------------------------|
+| `cp config/dev.exs.example config/dev.exs`    | creates the project's configuration file     |
+| `mix deps.get`                                | installs the dependencies                    |
+| `mix ecto.create`                             | creates the database                         |
+| `mix ecto.migrate`                            | run the database migrations                  |
+| `mix phx.server`                              | run the application                          |
 
 This is a backend project, you won't be able to go to `localhost:4000` and see an application.
 
