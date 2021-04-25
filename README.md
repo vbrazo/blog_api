@@ -1,8 +1,8 @@
 # Blog API in Phoenix
 
-This codebase was created to demonstrate a fully fledged backend application built with **Elixir and Phoenix** including CRUD operations, authentication, routing, pagination, and more.
+This codebase was created to demonstrate a fully fledged backend API with **Elixir and Phoenix** including CRUD operations, authentication, routing, pagination, and more.
 
-We've gone to great lengths to adhere to the **[credo](https://github.com/rrrene/credo)** community styleguides & best practices.
+We've gone to great lengths to adhere to the **[credo](https://github.com/rrrene/credo)** community style guides & best practices.
 
 - [Blog API in Phoenix](#blog-api-in-phoenix)
   - [Installation](#installation)
@@ -21,22 +21,13 @@ To run this project, you will need to install the following dependencies on your
 
 To get started, run the following commands in your project folder:
 
-```shell
-# creates the project's configuration file
-cp config/dev.exs.example config/dev.exs
-
-# installs the dependencies
-mix deps.get
-
-# creates the database.
-mix ecto.create
-
-# run the database migrations.
-mix ecto.migrate
-
-# run the application.
-mix phx.server
-```
+| Command                                     | Description                                  |
+|---------------------------------------------|----------------------------------------------|
+| cp config/dev.exs.example config/dev.exs    | creates the project's configuration file     |
+| mix deps.get                                | installs the dependencies                    |
+| mix ecto.create                             | creates the database                         |
+| mix ecto.migrate                            | run the database migrations                  |
+| mix phx.server                              | run the application                          |
 
 This is a backend project, you won't be able to go to `localhost:4000` and see an application.
 
