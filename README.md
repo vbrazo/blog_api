@@ -1,10 +1,17 @@
-# Blog Api in Elixir/Phoenix
+# Blog API in Phoenix
 
 This codebase was created to demonstrate a fully fledged backend application built with **Elixir and Phoenix** including CRUD operations, authentication, routing, pagination, and more.
 
 We've gone to great lengths to adhere to the **[credo](https://github.com/rrrene/credo)** community styleguides & best practices.
 
-## Installing / Getting started
+- [Blog API in Phoenix](#blog-api-in-phoenix)
+  - [Installation](#installation)
+  - [Tests](#installation)
+  - [Documentation](#documentation)
+  - [Style guide](#style-guide)
+  - [Licensing](#licensing)
+
+## Installing
 
 To run this project, you will need to install the following dependencies on your system:
 
