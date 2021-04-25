@@ -13,15 +13,17 @@ defmodule BlogApi.Accounts.UsersTest do
     image: "some image"
   }
 
-  test "update_user/2 hashes the password if new one set" do
-    {:ok, user} = BlogApi.Accounts.Auth.register(@user_create_attrs)
+  describe "given valid parameters" do
+    test "update_user/2 hashes the password if new one set" do
+      {:ok, user} = BlogApi.Accounts.Auth.register(@user_create_attrs)
 
-    new_password = "newPassword!123"
+      new_password = "newPassword!123"
 
-    Users.update_user(user, %{password: new_password})
+      Users.update_user(user, %{password: new_password})
 
-    assert BlogApi.Accounts.Auth.find_user_and_check_password(%{
-             "user" => %{"email" => @user_create_attrs.email, "password" => new_password}
-           })
+      assert BlogApi.Accounts.Auth.find_user_and_check_password(%{
+               "user" => %{"email" => @user_create_attrs.email, "password" => new_password}
+             })
+    end
   end
 end
