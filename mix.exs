@@ -52,6 +52,7 @@ defmodule BlogApi.Mixfile do
       {:credo, "~> 0.8.5", only: [:dev, :test]},
       {:ex_machina, "~> 2.0", only: :test},
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
+      {:faker, "~> 0.16", only: :test},
       {:plug, "~> 1.0"},
       {:corsica, "~> 1.0"}
     ]

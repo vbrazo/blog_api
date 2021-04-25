@@ -30,14 +30,18 @@ defmodule BlogApiWeb.ArticleControllerTest do
 
     assert json == %{
              "id" => json["id"],
-             "body" => "some body",
-             "description" => "some description",
+             "body" => json["body"],
+             "description" => json["description"],
              "slug" => "some-title",
              "createdAt" => json["createdAt"],
              "updatedAt" => json["updatedAt"],
              "favoritesCount" => 0,
-             "title" => "some title",
-             "author" => %{"bio" => "some bio", "image" => "some image", "username" => "john"},
+             "title" => json["title"],
+             "author" => %{
+               "bio" => json["author"]["bio"],
+               "image" => json["author"]["image"],
+               "username" => json["author"]["username"]
+             },
              "favorited" => false,
              "tagList" => nil
            }
@@ -64,14 +68,18 @@ defmodule BlogApiWeb.ArticleControllerTest do
 
     assert json == %{
              "id" => article_id,
-             "body" => "some updated body",
-             "description" => "some updated description",
+             "body" => json["body"],
+             "description" => json["description"],
              "slug" => "some-updated-title",
              "favoritesCount" => 0,
              "createdAt" => json["createdAt"],
              "updatedAt" => json["updatedAt"],
-             "title" => "some updated title",
-             "author" => %{"bio" => "some bio", "image" => "some image", "username" => "john"},
+             "title" => json["title"],
+             "author" => %{
+               "bio" => json["author"]["bio"],
+               "image" => json["author"]["image"],
+               "username" => json["author"]["username"]
+             },
              "favorited" => false,
              "tagList" => ["tag1", "tag2"]
            }
@@ -97,17 +105,17 @@ defmodule BlogApiWeb.ArticleControllerTest do
 
     assert json == %{
              "id" => article.id,
-             "body" => "some body",
-             "description" => "some description",
+             "body" => json["body"],
+             "description" => json["description"],
              "slug" => article.slug,
              "favoritesCount" => 1,
              "createdAt" => json["createdAt"],
              "updatedAt" => json["updatedAt"],
-             "title" => "some title",
+             "title" => json["title"],
              "author" => %{
-               "bio" => "some bio",
-               "image" => "some image",
-               "username" => "john"
+               "bio" => json["author"]["bio"],
+               "image" => json["author"]["image"],
+               "username" => json["author"]["username"]
              },
              "favorited" => true,
              "tagList" => ["tag1", "tag2"]
@@ -128,17 +136,17 @@ defmodule BlogApiWeb.ArticleControllerTest do
 
     assert json == %{
              "id" => article.id,
-             "body" => "some body",
-             "description" => "some description",
+             "body" => json["body"],
+             "description" => json["description"],
              "slug" => article.slug,
              "favoritesCount" => 0,
              "createdAt" => json["createdAt"],
              "updatedAt" => json["updatedAt"],
-             "title" => "some title",
+             "title" => json["title"],
              "author" => %{
-               "bio" => "some bio",
-               "image" => "some image",
-               "username" => "john"
+               "bio" => json["author"]["bio"],
+               "image" => json["author"]["image"],
+               "username" => json["author"]["username"]
              },
              "favorited" => false,
              "tagList" => ["tag1", "tag2"]
