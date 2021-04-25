@@ -6,8 +6,8 @@ We've gone to great lengths to adhere to the **[credo](https://github.com/rrrene
 
 - [Blog API in Phoenix](#blog-api-in-phoenix)
   - [Installation](#installation)
-  - [Tests](#tests)
   - [API Endpoints](#api-endpoints)
+  - [Tests](#tests)
   - [Documentation](#documentation)
   - [Style guide](#style-guide)
   - [Licensing](#licensing)
@@ -30,15 +30,7 @@ To get started, run the following commands in your project folder:
 | `mix ecto.migrate`                            | run the database migrations                  |
 | `mix phx.server`                              | run the application                          |
 
-This is a backend project, you won't be able to go to `localhost:4000` and see an application.
-
-## Tests
-
-To run the tests for this project, simply run in your terminal:
-
-```shell
-mix test
-```
+This is a backend project, you won't be able to go to `localhost:4000` and see a Frontend application. You can test the API endpoint using Postman or Insomnia.
 
 ## API Endpoints
 
@@ -70,6 +62,14 @@ mix test
 | `/profiles/:username`         | ProfileController        | show         | GET          |
 | `/profiles/:username/follow`  | ProfileController        | follow       | POST         |
 | `/profiles/:username/follow`  | ProfileController        | unfollow     | DELETE       |
+
+## Tests
+
+To run the tests for this project, simply run in your terminal:
+
+```shell
+mix test
+```
 
 ## Documentation
 
