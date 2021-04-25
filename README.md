@@ -7,6 +7,7 @@ We've gone to great lengths to adhere to the **[credo](https://github.com/rrrene
 - [Blog API in Phoenix](#blog-api-in-phoenix)
   - [Installation](#installation)
   - [Tests](#tests)
+  - [API Endpoints](#api-endpoints)
   - [Documentation](#documentation)
   - [Style guide](#style-guide)
   - [Licensing](#licensing)
@@ -38,6 +39,37 @@ To run the tests for this project, simply run in your terminal:
 ```shell
 mix test
 ```
+
+## API Endpoints
+
+| Command                       | Controller               | Action       | HTTP method  |
+|-------------------------------|--------------------------|--------------|--------------|
+| `/articles/feed`              | ArticleController        | feed         | GET          |
+| `/articles`                   | ArticleController        | index        | GET          |
+| `/articles/:id`               | ArticleController        | show         | GET          |
+| `/articles`                   | ArticleController        | create       | POST         |
+| `/articles/:id`               | ArticleController        | put/patch    | PUT/PATCH    |
+| `/articles/:id`               | ArticleController        | delete       | DELETE       |
+| `/articles/:id/comments`      | CommentController        | index        | GET          |
+| `/articles/:id/comments/:id`  | CommentController        | show         | GET          |
+| `/articles/:id/comments`      | CommentController        | create       | POST         |
+| `/articles/:id/comments/:id`  | CommentController        | put/patch    | PUT/PATCH    |
+| `/articles/:id/comments/:id`  | CommentController        | delete       | DELETE       |
+| `/comments`                   | CommentController        | index        | GET          |
+| `/comments/:id`               | CommentController        | show         | GET          |
+| `/comments`                   | CommentController        | create       | POST         |
+| `/comments/:id`               | CommentController        | put/patch    | PUT/PATCH    |
+| `/comments/:id`               | CommentController        | delete       | DELETE       |
+| `/articles/:slug/favorite`    | ArticleController        | favorite     | POST         |
+| `/articles/:slug/favorite`    | ArticleController        | unfavorite   | DELETE       |
+| `/tags`                       | TagController            | index        | GET          |
+| `/user`                       | UserController           | current_user | GET          |
+| `/user`                       | UserController           | update       | PUT          |
+| `/users`                      | UserController           | create       | POST         |
+| `/users/login`                | SessionController        | create       | POST         |
+| `/profiles/:username`         | ProfileController        | show         | GET          |
+| `/profiles/:username/follow`  | ProfileController        | follow       | POST         |
+| `/profiles/:username/follow`  | ProfileController        | unfollow     | DELETE       |
 
 ## Documentation
 
