@@ -34,7 +34,7 @@ This is a backend project, you won't be able to go to `localhost:4000` and see a
 
 ## API Endpoints
 
-| Command                       | Controller               | Action       | HTTP method  |
+| Route                         | Controller               | Action       | HTTP method  |
 |-------------------------------|--------------------------|--------------|--------------|
 | `/articles/feed`              | ArticleController        | feed         | GET          |
 | `/articles`                   | ArticleController        | index        | GET          |
