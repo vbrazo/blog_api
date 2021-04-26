@@ -6,6 +6,7 @@ We've gone to great lengths to adhere to the **[credo](https://github.com/rrrene
 
 - [Blog API in Phoenix](#blog-api-in-phoenix)
   - [Installation](#installation)
+  - [Database schema](#database-schema)
   - [API Endpoints](#api-endpoints)
   - [Tests](#tests)
   - [Documentation](#documentation)
@@ -31,6 +32,10 @@ To get started, run the following commands in your project folder:
 | `mix phx.server`                              | run the application                          |
 
 This is a backend project, you won't be able to go to `localhost:4000` and see a Frontend application. You can test the API endpoint using Postman or Insomnia.
+
+## Database schema
+
+<img src="https://github.com/vbrazo/blog_api/blob/master/docs/database.png" width=600 />
 
 ## API Endpoints
 
