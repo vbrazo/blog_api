@@ -15,5 +15,5 @@ config :blog_api, BlogApi.Repo,
   username: "postgres",
   password: "postgres",
   database: "blog_api_test",
-  hostname: "localhost",
+  hostname: "db",
   pool: Ecto.Adapters.SQL.Sandbox

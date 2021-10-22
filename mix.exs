@@ -38,21 +38,22 @@ defmodule BlogApi.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.3.0"},
-      {:phoenix_pubsub, "~> 1.0"},
+      {:phoenix, "~> 1.6.2"},
+      {:phoenix_pubsub, "~> 2.0"},
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, "~> 0.13.3"},
+      {:poison, "~> 3.1.0"},
       {:gettext, "~> 0.11"},
       {:proper_case, "~> 1.0.0"},
-      {:cowboy, "~> 1.1"},
-      {:plug_cowboy, "~> 1.0.0"},
+      {:cowboy, "~> 2.7"},
+      {:plug_cowboy, "~> 2.2"},
       {:comeonin, "~> 3.2"},
       {:guardian, "~> 1.0"},
       {:excoveralls, "~> 0.7", only: [:dev, :test]},
       {:credo, "~> 0.8.5", only: [:dev, :test]},
       {:ex_machina, "~> 2.0", only: :test},
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
-      {:faker, "~> 0.16", only: :test},
+      {:faker, "~> 0.16", only: [:test, :dev]},
       {:plug, "~> 1.0"},
       {:corsica, "~> 1.0"}
     ]
